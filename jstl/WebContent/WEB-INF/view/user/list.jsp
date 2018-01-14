@@ -9,8 +9,20 @@
 </head>
 <body>
 유저리스트<br>
+<form action="<%=root%>/WEB-INF/view/user/list.jsp" method="post">
+<table border="1">
+<tr>
+<th>번호</th>
+<th>이름</th>
+<th>나이</th>
+<th>아이디</th>
+<th>비밀번호</th>
+<th>주소</th>
+</tr>
+
+
 <c:forEach items="${userList}" var="user">
-	유저번호 : ${user.uiNo}, 유저이름: ${user.uiName}, 유저나이: ${user.uiAge}<br>
+	번호 : ${user.uiNo}, 이름 : ${user.uiName}, 나이 : ${user.uiAge}, 아이디 : ${user.uiId}, 비밀번호 : ${user.Pwd}, 주소 : ${user.adderss}<br>
 </c:forEach>
 </body>
 </html>

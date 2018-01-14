@@ -16,6 +16,7 @@ public class UserServiceImpl implements UserService {
 		uc.setUiName("이름"+ i);
 		uc.setUiAge(i);
 		uc.setUiId("아이디"+ i);
+		uc.setUiPwd("비밀번호"+i);
 		uc.setAddress("주소"+ i);
 		return uc;
 	}

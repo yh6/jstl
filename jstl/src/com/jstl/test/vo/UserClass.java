@@ -11,13 +11,12 @@ public class UserClass {
 	private String uiPwd;
 	private String uiRegdate;
 	private String address;
-	private boolean saveId;
-	public boolean isSaveId;
+
 	@Override
 	public String toString() {
 		return "UserClass [ciNo=" + ciNo + ", ciName=" + ciName + ", ciDesc=" + ciDesc + ", uiNo=" + uiNo + ", uiName="
 				+ uiName + ", uiAge=" + uiAge + ", uiId=" + uiId + ", uiPwd=" + uiPwd + ", uiRegdate=" + uiRegdate
-				+ ", address=" + address + ", saveId=" + saveId + ", isSaveId=" + isSaveId + "]";
+				+ ", address=" + address +"]";
 	}
 	public int getCiNo() {
 		return ciNo;
