@@ -12,13 +12,13 @@
 	
 	<table border="1">
 		<tr>
-			<th>이름</th>
-			<th>나이</th>
+			<th>반이름</th>
+			<th>반정보</th>
 		</tr>
-		<c:forEach items="${userList}" var="ui">
+		<c:forEach items="${classList}" var="ci">
 		<tr>
-		<td>${ui.uiName}</td>
-		<td>${ui.uiAge}</td>
+		<td>${ci.ciName}</td>
+		<td>${ci.ciDesc}</td>
 		</tr>
 		</c:forEach>
 	</table>

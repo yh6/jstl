@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.iot.test.service.ClassService;
 import com.iot.test.service.UserService;
+import com.iot.test.service.impl.ClassServiceImpl;
 import com.iot.test.service.impl.UserServiceImpl;
 
 
@@ -33,6 +35,9 @@ public class JspServlet extends HttpServlet {
 		if(uri.indexOf("user/list")!=-1) {
 			UserService us = new UserServiceImpl();
 			us.getUserList(req);
+		}else if (uri.indexOf("Class/list")!=-1) {
+			ClassService cs = new ClassServiceImpl();
+			cs.getClassList(req);
 		}
 		uri = "/WEB-INF" + uri + ".jsp";
 		RequestDispatcher rd = req.getRequestDispatcher(uri); 

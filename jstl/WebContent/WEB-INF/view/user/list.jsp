@@ -17,11 +17,17 @@
 		<tr>
 			<th>이름</th>
 			<th>나이</th>
+			<th>아이디</th>
+			<th>비밀번호</th>
+			<th>주소</th>
 		</tr>
 		<c:forEach items="${userList}" var="ui">
 		<tr>
 		<td>${ui.uiName}</td>
 		<td>${ui.uiAge}</td>
+		<td>${ui.uiId}</td>
+		<td>${ui.uiPwd}</td>
+		<td>${ui.address}</td>
 		</tr>
 		</c:forEach>
 	</table>
