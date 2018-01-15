@@ -10,7 +10,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<form>
+	<input type="text" name="uiName"> <input type="submit" value="검색">
+</form>
 	유저리스트<br>	
 	
 	<table border="1">
