@@ -2,7 +2,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="/WEB-INF/view/common/common.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -22,6 +22,7 @@
 			<th>아이디</th>
 			<th>비밀번호</th>
 			<th>주소</th>
+		
 		</tr>
 		<c:forEach items="${userList}" var="ui">
 		<tr>
@@ -30,6 +31,7 @@
 		<td>${ui.uiId}</td>
 		<td>${ui.uiPwd}</td>
 		<td>${ui.address}</td>
+
 		</tr>
 		</c:forEach>
 	</table>

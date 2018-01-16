@@ -15,10 +15,12 @@ public class ClassServiceImpl implements ClassService{
 	@Override
 	public void getClassList(HttpServletRequest req) {
 		ClassInfo ci = null;
-		String json = req.getParameter("param");
+		String json = req.getParameter("param"); //검색기능할때 클라이언트가 입력한값을 param으로 받는다
 		if(json!=null) {
-			ci = gs.fromJson(json,ClassInfo.class);			
-		}req.setAttribute("ClassList",cdao.selectClassList(ci));
+			ci = gs.fromJson(json,ClassInfo.class);	
+			
+		}req.setAttribute("classList",cdao.selectClassList(ci));
+		System.out.println(ci);
 	}
 
 	@Override

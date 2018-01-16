@@ -37,7 +37,10 @@ public class ClassDAOImpl implements ClassDAO {
 				ci2.setCiNo(rs.getInt("cino"));
 				ci2.setCiName(rs.getString("ciname"));
 				ci2.setCiDesc(rs.getString("cidesc"));
+				classList.add(ci2);
+				System.out.println(ci2);
 			}
+			
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally {
@@ -46,6 +49,7 @@ public class ClassDAOImpl implements ClassDAO {
 			DBUtil.close(ps);
 		}
 		return classList;
+		
 	}
 
 	@Override
