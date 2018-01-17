@@ -15,7 +15,7 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public void setCustomerList(HttpServletRequest req) {	
 		//System.out.println(req.getParameter("order"));
-	   if(
+	   //if(
 		
 		req.setAttribute("customerList", cdao.selectCustomerList(req.getParameter("order"),Integer.parseInt(req.getParameter("check"))));
 		

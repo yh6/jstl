@@ -15,15 +15,16 @@ public class UserServiceImpl implements UserService {
 	public void getUserList(HttpServletRequest req) {
 		UserInfo ui = null;
 		String searchType = req.getParameter("searchType");
+		String searchStr = req.getParameter("searchStr");
 		if(searchType !=null) {
 			ui = new UserInfo();
-			ui.setSearchType(searchType);
+			ui.setSearchType(searchStr);
 			if(searchType.equals("uiName")) {
-				ui.setUiName(searchType);
+				ui.setUiName(searchStr);
 			}else if(searchType.equals("uiAge")) {
-				ui.setUiAge(Integer.parseInt(searchType));
+				ui.setUiAge(Integer.parseInt(searchStr));
 			}else if(searchType.equals("adderss")) {
-				ui.setAddress(searchType);
+				ui.setAddress(searchStr);
 			}
 			
 		}
