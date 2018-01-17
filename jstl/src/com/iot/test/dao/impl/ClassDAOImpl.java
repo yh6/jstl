@@ -38,7 +38,7 @@ public class ClassDAOImpl implements ClassDAO {
 				ci2.setCiName(rs.getString("ciname"));
 				ci2.setCiDesc(rs.getString("cidesc"));
 				classList.add(ci2);
-				System.out.println(ci2);
+				//System.out.println(ci2);
 			}
 			
 		}catch(SQLException e) {

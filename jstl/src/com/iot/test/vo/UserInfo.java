@@ -9,6 +9,13 @@ public class UserInfo {
 	private int ciNo;
 	private String address;
 	private String uiRegdate;
+	private String searchType;
+	public String getSearchType() {
+		return searchType;
+	}
+	public void setSearchType(String searchType) {
+		this.searchType = searchType;
+	}
 	@Override
 	public String toString() {
 		return "UserInfo [uiNo=" + uiNo + ", uiName=" + uiName + ", uiAge=" + uiAge + ", uiPwd=" + uiPwd + ", uiId="

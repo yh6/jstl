@@ -18,7 +18,7 @@
 		<th>이름</th>
 		<th>정보</th>
 	<tr>
-<c:forEach items="${menuList}" value="Menu">
+<c:forEach items="${menuList}" var="Menu">
 	<tr>
 		<th>${Menu.mNum}</th>
 		<th>${Menu.mUrl}</th>
