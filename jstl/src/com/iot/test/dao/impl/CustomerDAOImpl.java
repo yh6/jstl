@@ -16,7 +16,7 @@ import com.iot.test.vo.Menu;
 public class CustomerDAOImpl implements CustomerDAO {
 
 	@Override
-	public List<Customer> selectCustomerList(String orderStr, int check) {
+	public List<Customer> selectCustomerList(String orderStr, String check) {
 		List<Customer> customerList = new ArrayList<Customer>();	
 		Connection con = null;
 		PreparedStatement ps = null;
@@ -26,7 +26,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 			String sql = "select * from customer";
 			con = DBConTest.getCon();
 			if(orderStr!=null ) {
-				if(check ==0) {
+				if(check==null || check.equals("0")) {
 					sql +=" order by " + orderStr;
 				}else {
 					sql +=" order by " + orderStr + " desc";

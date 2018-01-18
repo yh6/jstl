@@ -11,14 +11,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<br>
 고객리스트<br>
 <table border="1" cellspacing="0" cellpadding="0">
 	<tr>
-		<th><a href="${root}/view/customer/list?order=customerid">CustomerID</a></th>
-		<th><a href="${root}/view/customer/list?order=customername">CustomerName</a></th>
-		<th><a href="${root}/view/customer/list?order=city">City</a></th>
-		<th><a href="${root}/view/customer/list?order=country">Country</a></th>
+		<th><a href="${root}/view/customer/list?order=customerid&check=${check}">CustomerID</a></th>
+		<th><a href="${root}/view/customer/list?order=customername&check=${check}">CustomerName</a></th>
+		<th><a href="${root}/view/customer/list?order=city&check=${check}">City</a></th>
+		<th><a href="${root}/view/customer/list?order=country&check=${check}">Country</a></th>
 	</tr>
 	<c:if test="${customerList eq null}">
 	<tr>

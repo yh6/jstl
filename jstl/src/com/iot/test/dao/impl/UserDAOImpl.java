@@ -45,6 +45,7 @@ public class UserDAOImpl implements UserDAO {
 				ui2.setUiNo(rs.getInt("uino"));
 				ui2.setUiId(rs.getString("uiid"));
 				ui2.setUiAge(rs.getInt("uiage"));
+				ui2.setCiNo(rs.getInt("cino"));
 				ui2.setUiName(rs.getString("uiname"));
 				ui2.setUiPwd(rs.getString("uipwd"));
 				ui2.setAddress(rs.getString("address"));
@@ -69,19 +70,19 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public int insertUser(UserInfo ui) {
-		// TODO Auto-generated method stub
+	
 		return 0;
 	}
 
 	@Override
 	public int updateUser(UserInfo ui) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
 	@Override
 	public int deleteUser(UserInfo ui) {
-		// TODO Auto-generated method stub
+		
 		return 0;
 	}
 
