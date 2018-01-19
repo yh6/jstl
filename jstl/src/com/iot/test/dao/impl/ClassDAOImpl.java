@@ -31,7 +31,7 @@ public class ClassDAOImpl implements ClassDAO {
 				ps.setString(1, "%" + ci.getCiName() + "%");
 			}
 			rs = ps.executeQuery();
-			System.out.println();
+			//System.out.println();
 			while (rs.next()) {
 				ClassInfo ci2 = new ClassInfo();
 				ci2.setCiNo(rs.getInt("cino"));

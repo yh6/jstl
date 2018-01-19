@@ -44,12 +44,10 @@ public class UserDAOImpl implements UserDAO {
 				UserInfo ui2 = new UserInfo();
 				ui2.setUiNo(rs.getInt("uino"));
 				ui2.setUiId(rs.getString("uiid"));
-				ui2.setUiAge(rs.getInt("uiage"));
-				ui2.setCiNo(rs.getInt("cino"));
+				ui2.setUiAge(rs.getInt("uiage"));				
 				ui2.setUiName(rs.getString("uiname"));
 				ui2.setUiPwd(rs.getString("uipwd"));
-				ui2.setAddress(rs.getString("address"));
-				ui2.setUiRegdate(rs.getString("uiregdate"));
+				ui2.setAddress(rs.getString("address"));			
 				userList.add(ui2);
 			}
 		} catch (SQLException e) {
@@ -70,20 +68,39 @@ public class UserDAOImpl implements UserDAO {
 
 	@Override
 	public int insertUser(UserInfo ui) {
-	
-		return 0;
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		try {
+			con = DBCon.getCon();
+			String sql = "insert into user_info(uiname,uiage,uiid,uipwd,address)\r\n"
+					+ "values(?,?,?,?,?)";
+			ps = con.prepareStatement(sql);
+			ps.setString(1, ui.getUiName());
+			ps.setInt(2, ui.getUiAge());
+			ps.setString(3, ui.getUiId());
+			ps.setString(4, ui.getUiPwd());	
+			ps.setString(5, ui.getAddress());
+			return ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBUtil.close(con);
+			DBUtil.close(ps);
+		}
+		return 1;
 	}
 
 	@Override
 	public int updateUser(UserInfo ui) {
 		
-		return 0;
+		return 1;
 	}
 
 	@Override
 	public int deleteUser(UserInfo ui) {
 		
-		return 0;
+		return 1;
 	}
 
 }

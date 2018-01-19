@@ -20,7 +20,7 @@ public class ClassServiceImpl implements ClassService{
 			ci = gs.fromJson(json,ClassInfo.class);	
 			
 		}req.setAttribute("classList",cdao.selectClassList(ci));
-		System.out.println(ci);
+		//System.out.println(ci);
 	}
 
 	@Override
