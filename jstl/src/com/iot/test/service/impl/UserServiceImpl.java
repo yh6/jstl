@@ -21,17 +21,17 @@ public class UserServiceImpl implements UserService {
 		String searchStr = req.getParameter("searchStr");
 		if (searchType != null) {
 			ui = new UserInfo();
-			ui.setSearchType(searchStr);
+			ui.setSearchType(searchType);
 			if (searchType.equals("uiName")) {
 				ui.setUiName(searchStr);
 			} else if (searchType.equals("uiAge")) {
 				ui.setUiAge(Integer.parseInt(searchStr));
-			} else if (searchType.equals("adderss")) {
+			} else  {
 				ui.setAddress(searchStr);
 			}
 
 		}
-		req.setAttribute("userList", udao.selectUserList(ui));
+		//req.setAttribute("userList", udao.selectUserList(ui));
 	}
 
 	@Override
@@ -55,20 +55,23 @@ public class UserServiceImpl implements UserService {
 		ui.setAddress(address);		
 		udao.insertUser(ui);
 		
-	//	req.setAttribute("", gs.toJson(rm));
+		//req.setAttribute("userList", udao.insertUserList(ui));
 		
 	}
 
 	@Override
 	public void updateUser(HttpServletRequest req) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
 	@Override
 	public void deleteUser(HttpServletRequest req) {
-		// TODO Auto-generated method stub
-
+		UserInfo ui = new UserInfo();
+		int uiNo = Integer.parseInt(req.getParameter("uiNo"));
+		ui.setUiNo(uiNo);
+		
+		//req.
 	}
 
 }

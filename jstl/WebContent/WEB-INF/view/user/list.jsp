@@ -20,7 +20,7 @@
 			var searchType = getEl("searchType").value.trim();
 			var searchStr = getEl("searchStr").value.trim();
 
-			if (searchType.length < 0) {
+			if (searchType.length == 0) {
 				alert("검색종류를 선택해주세요");
 				getEl("searchType").focus();
 				return false;
@@ -49,13 +49,12 @@
 	<form onsubmit="return checkValue()">
 		<select name="searchType" id="searchType">
 			<option value="">선택</option>
-			<option value="uiName"
-				${param.searchType eq "uiName" ? "selected":""}>이름</option>
+			<option value="uiName" ${param.searchType eq "uiName" ? "selected":""}>이름</option>
 			<option value="uiAge" ${param.searchType eq "uiAge" ? "selected":""}>나이</option>
-			<option value="address"
-				${param.searchType eq "address" ? "selected":""}>주소</option>
-		</select> <input type="text" name="searchStr" id="searchStr"
-			value="${param.searchStr}"> <input type="submit" value="검색">
+			<option value="address" ${param.searchType eq "address" ? "selected":""}>주소</option>
+		</select>
+	 <input type="text" name="searchStr" id="searchStr"value="${param.searchStr}"> 
+	 <input type="submit" value="검색">
 	</form>
 
 	<table border="1">

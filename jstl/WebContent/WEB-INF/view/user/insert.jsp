@@ -8,35 +8,34 @@
 <title>insert</title>
 </head>
 <body>
-	<form>
-		<table>
-			<tr>
-				<h1>insertUser</h1>
+	<form onsubmit="<%=root%>/view/user/list">
+		<table border="1">
+		<tr>
+				<h1>insertUser</h1><br>
 				
-				<th>이름</th>
-				<td><input type="text" id="uiName" name="uiName" align="right" autofocus></td>
-			</tr>
+			<th>이름</th>
+			<th> 나이</th>
+			<th>아이디</th>
+			<th>비밀번호</th>
+			<th>주소</th>
+	
+		</tr>
+		<c:forEach items="${userList}" var="ui">
 			<tr>
-				<th>나이</th>
-				<td><input type="text" id="uiAge" name="uiAge" align="right"></td>
+				<td><input type="text" style="text-align:right;" autofocus>${ui.uiName}</td>
+				<td><input type="text" style="text-align:right;">${ui.uiAge}</td>
+				<td><input type="text">${ui.uiId}</td>
+				<td><input type="text">${ui.uiPwd}</td>
+				<td><input type="text">${ui.address}</td>
+				<input type="submit" id="singnBtn" value="완 료">
+				
 			</tr>
-			<tr>
-				<th>아이디</th>
-				<td><input type="text" id="uiId" name="uiId" align="right"></td>
-			</tr>
-			<tr>
-				<th>비밀번호</th>
-				<td><input type="password" id="uiPwd" name="uiPwd" align="right"></td>
-			</tr>
-
-			<tr>
-				<th>주소</th>
-				<td><input type="text" id="address" name="address" align="right"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><input type="submit" id="singnBtn" value="완 료"></td>
-			</tr>
-		</table>
+		</c:forEach>
+	</table>
+			
+				
+				
+		
 	</form>
 </body>
 </html>
