@@ -38,7 +38,7 @@
 	
 	 <input type="submit" value="수정">
 	
-	<form>
+	<form action="<%=root%>/view/user/">
 		<input type="text" name="deleteUser" id="deleteUser"
 			placeholder="번호를 입력하세요"> <input type="submit" value="삭제">
 	</form>

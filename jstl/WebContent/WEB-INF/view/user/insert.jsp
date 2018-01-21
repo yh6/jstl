@@ -11,7 +11,7 @@
 	<form onsubmit="<%=root%>/view/user/list">
 		<table border="1">
 		<tr>
-				<h1>insertUser</h1><br>
+				<h1>inser tUser</h1><br>
 				
 			<th>이름</th>
 			<th> 나이</th>
